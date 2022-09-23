@@ -1,8 +1,18 @@
-<div>
-  <%= image_tag @post_image.get_image %>
-  <p>ショップ名：<%= @post_image.shop_name %></p>
-  <p>説明：<%= @post_image.caption %></p>
-  <p>投稿ユーザー画像：<%= image_tag 'sample-author1.jpg' %></p>
-  <p>ユーザーネーム：<%= @post_image.user.name %></p>
-  <p>投稿日：<%= @post_image.created_at.strftime('%Y/%m/%d') %></p>
-</div>
+<div class="container mt-3">
+  <div class="container px-5 px-sm-0">
+  <div class="row">
+    
+    <%= render 'list', books: @books %>
+    
+    <div class="col-md-8 offset-md-1">
+      <h2>Book detail</h2>
+      <div>
+        <p>ショップ名：<%= @book.title %></p>
+        <p>説明：<%= @book.opinion %></p>
+        <p>ユーザーネーム：<%= @book.user.name %></p>
+        <p>投稿日：<%= @book.created_at.strftime('%Y/%m/%d') %></p>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
